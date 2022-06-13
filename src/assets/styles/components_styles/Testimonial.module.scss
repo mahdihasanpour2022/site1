@@ -1,3 +1,46 @@
 @import "../common_styles/variables";
 @import "../common_styles/mixins";
 @import "../common_styles/fonts";
+
+
+.testimondalHeader {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.clientBox {
+  padding: 1.5rem;
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.15);
+  height: 100%;
+
+  img {
+    width: 70px;
+    border-radius: 5px;
+    object-fit: contain;
+  }
+
+  h4 {
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  h5 {
+    margin: 0;
+    margin-bottom: 2rem;
+    opacity: 0.5;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width:992px) {
+  .clientBox {
+    margin-top: 4rem;
+  }
+  .clientTwo {
+    transform: scale( 1 , 1.2);
+    z-index: 2;
+  }
+}
