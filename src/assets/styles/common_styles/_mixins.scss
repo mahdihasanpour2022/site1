@@ -1,7 +1,7 @@
-@mixin flex($js , $ai) {
-  display: flex;
+@mixin flex( $js , $ai ) {
+  display: flex ;
   justuify-content: $js ;
-  align-items: $ai;
+  align-items: $ai ;
   @content;
 }
 
