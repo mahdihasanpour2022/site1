@@ -74,27 +74,29 @@
 .rightAboutus {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-text-align: center;
+  text-align: center;
+  overflow-x: hidden;
+
   img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
-    display: inline-block;
+    border-radius: 5px;
     position: relative;
-    top: 15%;
-    right: -5%;
+    right: -18%;
+    top: 20%;
   }
 
   &::before {
     content: "";
-    top: -8%;
-    right: -55%;
+    top: -2%;
+    right: -10%;
     width: 100%;
     height: 100%;
     position: absolute;
-    transform: scale(2, 1.5) rotatey(-20deg);
+    transform: scale(1,1);
     background: url("../../images/about-us-bg.svg")no-repeat center center/contain;
     z-index: -1;
   }

@@ -1,0 +1,51 @@
+@import "../common_styles/variables";
+@import "../common_styles/mixins";
+@import "../common_styles/fonts";
+
+.porfoliotitle {
+  text-align: center;
+
+  h5 {
+    opacity: 0.5;
+  }
+
+  h2 {
+    font-weight: 600;
+    opacity: 0.8;
+  }
+}
+
+.portfolioBox {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2rem 0;
+
+  img {
+    width: 250px;
+    margin: 0.25rem;
+    // flex: 1 1 150px !important;
+    flex-grow: 1;
+  }
+}
+
+.bluePolygon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  @include transition(height);
+
+  &::before {
+    content: "";
+    background-color: $light_blue;
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    right: -70%;
+  }
+}

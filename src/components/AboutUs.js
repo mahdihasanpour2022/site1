@@ -2,14 +2,14 @@ import React from 'react';
 // scss 
 import Styles from "../assets/styles/components_styles/AboutUs.module.scss";
 // images 
-import aboutus from "../assets/images/about-us-img.jpg";
+import aboutus from "../assets/images/about-us-img.png";
 // react icons 
 import { MdDone } from "react-icons/md";
 
 const AboutUs = () => {
   return (
     <>
-      <div className="conatiner-fluid my-4" >
+      <div className="conatiner-fluid my-5" >
         <div className="row m-0">
 
           <div className="col-md-6">
