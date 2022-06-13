@@ -3,22 +3,22 @@
 @import "../common_styles/fonts";
 
 .headerContainer {
-  max-width: 100%;
-  height: 83vh;
-  margin: 3rem 2rem;
+  // max-width: 100%;
+  // height: 83vh;
+  margin: 2rem 0;
   // background-color: red;
 
-  @include flex(center, center) {
-    flex-direction: column;
-  }
+  // @include flex(center, center) {
+  //   flex-direction: column;
+  // }
 
-  ;
+  // ;
 
   .headerLeft {
     width: 100%;
     height: 100%;
     // background-color: green;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     padding: 2rem;
     margin: 2rem 0;
     // display: flex;
@@ -180,7 +180,7 @@
 // media query 
 @media (min-width:768px) {
   .headerContainer {
-    height: 80vh;
+    // height: 80vh;
 
     .headerLeft {
       .title {
@@ -192,28 +192,34 @@
     .headerRight {
       .imageBox {
         img {
-          width: 100%;
-          height: 100%;
+          width: 70%;
+          height: 90%;
         }
+      }
+      .whiteBox{
+        top: 60%;
       }
     }
   }
 }
 
-@media (min-width:900px) {
+@media (min-width:992px) {
   .headerContainer {
-    @include flex(center, center) {
-      flex-direction: row;
-    }
+    // @include flex(center, center) {
+    //   flex-direction: row;
+    // }
 
-    ;
+    // ;
 
     .headerRight {
-      .imageBox {
-        img {
-          width: 70%;
-          height: 90%;
-        }
+      // .imageBox {
+      //   img {
+      //     width: 70%;
+      //     height: 90%;
+      //   }
+      // }
+      .whiteBox{
+        top: 65%;
       }
     }
 
@@ -223,17 +229,19 @@
 @media (min-width:1200px) {
   .headerContainer {
     .headerRight {
-      .orangePLane {
-        width: 90%;
+      // .orangePLane {
+      //   width: 90%;
 
+      // }
+      .whiteBox{
+        top: 75%;
       }
-
-      .imageBox {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
+      // .imageBox {
+      //   img {
+      //     width: 100%;
+      //     height: 100%;
+      //   }
+      // }
     }
   }
 }
