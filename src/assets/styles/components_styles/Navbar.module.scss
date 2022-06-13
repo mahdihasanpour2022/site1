@@ -1,0 +1,133 @@
+@import "../common_styles/variables";
+@import "../common_styles/mixins";
+@import "../common_styles/fonts";
+
+.navbarContainer {
+  width: 100%;
+  height: 17vh;
+  background-color: $black;
+  padding: 0 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .siteLogo {
+    width: 7rem;
+    object-fit: contain;
+    transition: all 0.3s ease;
+
+  }
+
+
+
+  .searchmenusignupIcon {
+    @include flex(center, center);
+
+    .ulNavbar {
+      display: none;
+
+      ul {
+        @include flex(center, center);
+        @include ziro_space;
+        list-style: none;
+        margin: 0 1rem;
+        transition: all 0.3s ease;
+        li {
+
+          .navlink {
+            text-decoration: none;
+            color: $ultra_lightgray;
+            font-family: $Poppins;
+          }
+
+          .active {
+            color: #00BCD4;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .serchIcon {
+      color: $orange;
+      display: inline-block;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .signupBtn {
+      display: none;
+      background: linear-gradient($light_orange , $dark_orange);
+      color: $white;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 2.5rem;
+      margin: 1rem;
+      font-family: $Poppins;
+      font-size: 1.1rem;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .menuIcon {
+      color: $white;
+      font-size: 3rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+// media query 
+@media (min-width:768px) {
+  .navbarContainer {
+    height: 20vh;
+
+    .siteLogo {
+      width: 10rem;
+    }
+
+    .searchmenusignupIcon {
+      .signupBtn {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width:900px) {
+  .navbarContainer {
+    .searchmenusignupIcon {
+      .ulNavbar {
+        display: block;
+
+        ul {
+          margin: 0 1.5rem;
+
+          li {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+
+      .menuIcon {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width:992px) {
+  .navbarContainer {
+    .searchmenusignupIcon {
+      .ulNavbar {
+        ul {
+          margin: 0 2.2rem;
+
+          li {
+            margin-right: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}
