@@ -1,4 +1,14 @@
+@import "./assets/styles/common_styles/fonts";
 
-body{
+body {
   margin: 0;
+  font-family: $Poppins !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none !important;
 }

@@ -1,7 +1,16 @@
-
+// colors 
 $white :#fff;
 $black:rgb(33,40,48);
 $ultra_lightgray:#f1f1f1;
 $orange:#FF5723;
 $light_orange:#FE8863;
 $dark_orange:#FB7044;
+$dark_blue:#111D5E;
+$pink:#FE346E;
+$darkgray:#212830;
+// gradient 
+$orange_gradient : linear-gradient($light_orange , $dark_orange);
+// font 
+$small_fs :20px;
+$medium_fs :48px;
+$bigest_fs:70px;

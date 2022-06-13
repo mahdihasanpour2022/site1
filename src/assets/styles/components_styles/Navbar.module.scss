@@ -14,7 +14,7 @@
   .siteLogo {
     width: 7rem;
     object-fit: contain;
-    transition: all 0.3s ease;
+    @include transition(all);
 
   }
 
@@ -32,6 +32,7 @@
         list-style: none;
         margin: 0 1rem;
         transition: all 0.3s ease;
+
         li {
 
           .navlink {
@@ -57,7 +58,7 @@
 
     .signupBtn {
       display: none;
-      background: linear-gradient($light_orange , $dark_orange);
+      background:$orange_gradient;
       color: $white;
       border: none;
       border-radius: 10px;
@@ -101,10 +102,10 @@
         display: block;
 
         ul {
-          margin: 0 1.5rem;
+          margin: 0 1.2rem;
 
           li {
-            margin-right: 1.5rem;
+            margin-right: 2rem;
           }
         }
       }
