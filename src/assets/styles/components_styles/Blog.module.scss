@@ -3,16 +3,123 @@
 @import "../common_styles/fonts";
 
 
-.blogHeader {
-  margin-top: 2rem;
-  text-align: center;
+.blog {
+  // width: 300px !important;
+  width: 100%;
+  // height: 100%;
+  height: fit-content;
+  // background-color: red;
+  margin: 1rem 0 !important;
   
-  h5 {
-    opacity: 0.5;
+  .blogContainer {
+    width: 100%;
+    // height: 100%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    
+    .imageBox {
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+    
+    .blogContent {
+      background-color: $white;
+      border-radius: 0 0 1rem 1rem;
+      padding: 2rem 1rem;
+      
+      .dateBox {
+        color: darkgray;
+        text-indent: 2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 25%;
+          left: 0;
+          width: 3.5rem;
+          height: 5px;
+          background: linear-gradient(to right, $white , $sky_blue);
+        }
+
+        p {
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -0.5rem;
+            width: 2px;
+            height: 100%;
+            background-color: $sky_blue;
+            z-index: -1;
+          }
+        }
+
+        span {
+          display: inline-block;
+          text-indent: 0.5rem;
+        }
+      }
+
+      h4 {
+        margin: 1rem 0;
+        color: $light_blue;
+        font-weight: 600;
+        opacity: 0.8
+      }
+
+      .readmore {
+        @include flex(center, center);
+        margin: 1.5rem 0;
+
+        .playIconBox {
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          background-color: rgba(255, 87, 35, 0.1);
+          border-radius: 10px;
+
+          svg {
+            color: $orange;
+            font-size: 1.5rem;
+          }
+        }
+
+        a {
+          color: $orange;
+          // font-weight: 600;
+          font-size: $small_fs;
+          display: inline-block;
+          margin-left: 1rem;
+        }
+      }
+    }
   }
 }
-@media (min-width:992px){
-  .blogHeader{
-    margin-top: 8rem;
+
+
+// media query 
+@media (min-width:768px){
+  .blog:nth-child(even){
+    transform: translate(0,2.5rem);
+    margin: 2rem 0; 
+  }
+}
+@media (min-width:992px) {
+  .blog {
+    width: 400px !important;
+  }
+  .blog:nth-child(even){
+    transform: translate(0,0);
+    margin: 0; 
   }
 }
